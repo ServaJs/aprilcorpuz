@@ -1,0 +1,8 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="all.css">
+    </head>
+    <body>
+   <li onclick="home()"><a href="#"><i class="fas fa-house"></i>Home</a></li>
+    </body>
+</html>
