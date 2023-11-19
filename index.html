@@ -1,0 +1,879 @@
+<html>
+    <head>
+        <meta name="viewport", content="width:device-width,initial-scale=1.0">
+<link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+            <link rel="stylesheet" href="./fontawesome-free-6.4.2-web/css/all.css">
+            <link rel="stylesheet" href="bootstrap.css">
+                    <title>E Portfolio</title>
+<style>
+/*sidebar*/
+    .sidebar{
+        width:0%;
+        height: 102vh;
+        background: linear-gradient(310deg, royalblue, royalblue,white);
+        transition: width 1.5s;
+        transition-delay: 0.1s;
+        overflow-y: auto;
+        color:white;
+        margin: 0;
+        z-index: 2;
+        top: 0%;
+        border-radius:5px;
+position: absolute;
+position:fixed;
+    }
+    body{
+        margin:0;
+        padding: 0;
+        overflow-y: auto;
+        background: #d3d3d3;
+        min-height: 120vh;
+        position: relative;
+        padding-bottom: 6.7rem;
+    }
+    html{
+        height: 120vh;
+    }
+    footer{
+        position: absolute;
+        bottom:0;
+    }
+    /*this is the menu button*/
+    #sdbarbtn{
+        position: absolute;
+        top:0%;
+        width: 20%;
+        height: 50px;
+        font-size: 33px;
+        text-align:center;
+        z-index: 1;
+        color: white;
+    }
+    /*back arrow or prev in the sidebar*/
+    #exit{
+        float:right;
+    }
+    /*sidebar navigation*/
+.sidebar a{
+    text-decoration: none;
+    display: block;
+    color: white;
+    transition: 1s;
+    border-bottom:1px solid black;
+}
+.sidebar > ul{
+   list-style-type: none; 
+   margin:2px;
+   padding: 0;
+}
+.sidebar > ul > li > a{
+    padding: 14px 16px;
+}
+.sidebar a:hover{
+    width: 90%;
+   background: white;
+   border-radius: 5px;
+   color: royalblue;
+   margin: auto;
+}
+.sidebar i{
+    float: right;
+}
+/*container for search, login etc*/
+.header{
+    position: absolute;
+    top: 0%;
+    width: 104%;
+    height: 50px;
+    align-content: center;
+    border-bottom: 1px solid blue;
+    position: sticky;
+    z-index: 1;
+    background: white;
+    background: royalblue;
+}
+/*search icon*/
+#search{
+        position: absolute;
+        top:12px;
+        right:55%;
+        width: 20%
+        height: 50px;
+        font-size: 20px;
+        text-align:center;
+        z-index: 1;
+        align-item:center;
+        align-content: center;
+        color: white;
+}
+#istg{
+    position: absolute;
+    right: 10%;
+    top: 10px;
+}
+/*login button*/
+#login{
+    background: royalblue;
+    border:1px solid white;
+    width: 70px;
+    height: 35px;
+    color: white;
+    border-radius:8px;
+}
+/*signup button*/
+#signup{
+        background: white;
+    border:1px solid royalblue;
+    width: 70px;
+    height: 35px;
+    color: royalblue;
+    border-radius:8px;
+}
+/*portfolio title*/
+#title{
+    border-bottom: 2px solid royalblue;
+    text-shadow:2px 2px 4px royalblue;
+}
+/*search bar*/
+#srch{
+    width: 20%;
+    height: 30px;
+    font-size: +10;
+    position: absolute;
+    top: 12;
+    border-radius: 9px;
+    right: 65%;
+    border-bottom: 1px solid white;
+    border-right:1px solid white;
+    border-top: none;
+    border-left:none;
+    display: none;
+}
+/* back arrow in the sidenav*/
+#exit{
+    font-size:+30;
+    color: white;
+}
+/*small light icon in the right bottom*/
+.theme{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    position: relative;
+    position: fixed;
+    right:5%;
+    background: royalblue;
+    color:white;
+    top:85vh;
+    text-align:center;
+    opacity: 0.4;
+    z-index: 0;
+}
+.theme>i{
+ margin:auto;
+ position: relative;
+ top:20%;
+}
+.theme:hover>i{
+    top: 30%;
+}
+.theme-content{
+    background: royalblue;
+    position: relative;
+    display: none;
+    top:-290%;
+    right: 50%;
+    width: 80px;
+    font-size:+20;
+    border-radius: 10px;
+    transition: 1s;
+}
+.theme:hover > .theme-content{
+    display: block;
+}
+.theme-content > span:hover{
+    background: white;
+    color:black;
+}
+.theme:hover{
+    opacity:1.0;
+}
+@media (min-width:400px) {
+    body{
+        font-size:+23;
+    }
+    #signup{
+        width:80px;
+    }
+    #login{
+        width: 80px;
+    }
+    body{
+        padding-bottom: 6.8rem;
+    }
+}
+      @media (min-width:950px) {
+          .jss > img{
+              float:left;
+              width: 200px;
+              height: 200px;
+          }
+          .button{
+              display: flex;
+              justify-content: space-between;
+              ;
+          }
+          #signup{
+              width: 90px;
+          }
+          #login{
+              width:90px;
+          }
+          #search{
+              right:3%;
+          }
+          #srch{
+              width: 30%;
+              right: 40%;
+              display:block;
+          }
+          #exit{
+              display: block;
+          }
+          body{
+              font-size:+25;
+       margin:0;
+       padding: 0;
+       padding-bottom: 6.9rem;
+          }
+          #sdbarbtn{
+              font-size:36px;
+              width:22%;
+          }
+          .sidebar{
+              font-size:+20;
+              max-width: 25%;
+          }
+          .sidebar>ul{
+              font-size:+20;
+          }
+          #landpage{
+              height: 20%;
+              width: 75%;
+              text-align: center;
+             background-size:100% 100%;
+          }
+}
+      #right{
+          float:right;
+          border: 1px solid black;
+      }
+      #left{
+          float: left;
+          border: 1px solid black;
+      }
+      /*the landpage of the portfolio*/
+      #landpage{
+        width: 104%;
+        height: 400px;
+        background-image:url('template.png');
+        text-align: center;
+        background-size:100% 115%;
+      }
+      /*the container for the picture and details*/
+      .jss{
+          border-radius:8px;
+          width: 90%;
+          background: skyblue;
+          overflow:hidden;
+          padding: 10px;
+          text-align: center;
+          margin:auto;
+      }
+      .jss > img {
+          border: 1px solid white;
+          border-radius:5px;
+      }
+      .jss:hover >.button{
+          display: block;
+          display: flex;
+          justify-content: space-around;
+          cursor: pointer;
+      }
+     .button {
+         display: flex;
+         justify-content: space-around;
+         display: none;
+         transition: 1s;
+     }
+     /*container for the jss div*/
+     .flexible {
+   display: flex;
+   flex-direction: column;
+   padding: 10px;
+   color: black;
+}
+#dash{
+    display: none;
+}
+.skills{
+    width:85%;
+    box-shadow: 
+    14px 14px 16px 0 rgba(0, 0, 0, 0.25),
+    -10px -10px 12px 0 rgba(255, 255, 255, 0.3);
+    margin: auto;
+    border-radius:8px;
+    padding:10px;
+}
+.container{
+    width: 90%;
+    height: 30px;
+    border-radius: .2in;
+    border: 1px solid royalblue;
+    padding:0;
+    overflow: hidden;
+}
+.bar{
+                width: 0%;
+                height: 30px;
+                text-align: right;
+        background:skyblue;
+        transition: 1s;
+}
+  .container:not(:last-child){
+    margin-bottom: 10px;
+  }
+  /*Jss*/
+  #pat-bar{
+    animation: html-fill 2s forwards;
+    animation-delay: 1.2s;
+}
+@keyframes html-fill{
+    100%{
+        width: 95%;
+    }
+}
+    #css-bar{
+    animation: css-fill 2s forwards;
+    animation-delay: 1.2s;
+}
+@keyframes css-fill{
+    100%{
+        width: 89%;
+    }
+}
+#english-bar{
+    animation: english-fill 2s forwards;
+    animation-delay: 1.2s;
+}
+@keyframes english-fill{
+    100%{
+        width: 30%;
+    }
+}
+#filipino-bar{
+    animation: filipino-fill 2s forwards;
+    animation-delay: 1.2s;
+}
+@keyframes filipino-fill{
+    100%{
+        width: 80%;
+    }
+}
+/*april*/
+#soc-bar{
+    animation: soc-fill 2s forwards;
+    animation-delay: 1.2s;
+}
+@keyframes soc-fill{
+    100%{
+        width: 85%;
+    }
+}
+#time-bar{
+    animation: time-fill 2s forwards;
+    animation-delay: 1.2s;
+}
+@keyframes time-fill{
+    100%{
+        width: 87%;
+    }
+}
+#read-bar{
+    animation: read-fill 2s forwards;
+    animation-delay: 1.2s;
+}
+@keyframes read-fill{
+    100%{
+        width: 89%;
+    }
+}
+#css1-bar{
+    animation: pat1-fill 2s forwards;
+    animation-delay: 1.2s;
+}
+@keyframes pat1-fill{
+    100%{
+        width: 100%;
+    }
+}
+#soc1-bar{
+    animation: soc1-fill 2s forwards;
+    animation-delay: 1.2s;
+}
+@keyframes soc1-fill{
+    100%{
+        width: 80%;
+    }
+}
+#time1-bar{
+    animation: time1-fill 2s forwards;
+    animation-delay: 1.2s;
+}
+@keyframes time1-fill{
+    100%{
+        width: 30%;
+    }
+}
+#read1-bar{
+    animation: read1-fill 2s forwards;
+    animation-delay: 1.2s;
+}
+@keyframes read1-fill{
+    100%{
+        width: 50%;
+    }
+}
+/*russel*/
+#css2-bar{
+    animation: pat2-fill 2s forwards;
+    animation-delay: 1.2s;
+}
+@keyframes pat2-fill{
+    100%{
+        width: 90%;
+    }
+}
+#soc2-bar{
+    animation: soc2-fill 2s forwards;
+    animation-delay: 1.2s;
+}
+@keyframes soc2-fill{
+    100%{
+        width: 100%;
+    }
+}
+#time2-bar{
+    animation: time2-fill 2s forwards;
+    animation-delay: 1.2s;
+}
+@keyframes time2-fill{
+    100%{
+        width: 20%;
+    }
+}
+#read2-bar{
+    animation: read2-fill 2s forwards;
+    animation-delay: 1.2s;
+}
+@keyframes read2-fill{
+    100%{
+        width: 80%;
+    }
+}
+/*patrick*/
+#time3-bar{
+    animation: time3-fill 2s forwards;
+    animation-delay: 1.2s;
+}
+@keyframes time3-fill{
+    100%{
+        width: 97%;
+    }
+}
+#read3-bar{
+    animation: read3-fill 2s forwards;
+    animation-delay: 1.2s;
+}
+@keyframes read3-fill{
+    100%{
+        width: 98%;
+    }
+}
+      </style>
+</head>
+<body id="body">
+    <!--search icon-->
+    <div class="header " id="topper"><span id="search" onclick="myFunc()"><i class="fas fa-search"></i></span>
+ <span id="istg"><button id="login">Login</button>
+    <button id="signup">Signup</button></span>
+                 <input id="srch"type="search" placeholder="Search..."/>
+                          <span onclick="show()" id="sdbarbtn"><label>&#9776;</label></span>
+    </div>
+    <!-- the landpage of the site-->
+<div id="landpage">
+    <h1 align="center" style="color:white; font-size:+70; font-family: 'poppins', serif;">Portfolio</h1>
+    <p align="center" style="color:white">This portfolio is made by Jhon Seal Serva, and presented to  <span style="font-family: 'poppins', serif;">Miss Verlan Jane Garcia </span></span></p>
+   <div class="button1"><button class=" btn btn-light start" onclick="rollDown()">Let's get started</button></div>
+    </div>
+<br>
+<h3 style="font-family: 'poppins', serif; margin:5%;">About us</h3>
+<p style="margin:5%;">The purpose of this portfolio is to introduce and show the skills and information of the students and their favorite things to do and things they want to do.</p>
+</div>
+<br>
+<br>
+<h2 align="center" style="
+color:white;
+text-shadow:3px 3px 5px skyblue;
+font-family: 'poppins', serif;
+transform:skew(-30deg);
+">"TEAM"</h2>
+<!--The container and the details of student-->
+<div class="flexible" id="flexer">
+<div class="jss">
+    <img src="serva.jpg" width="120px" height="120x"/>
+<label style="font-weight:509; color:white;">Hi There!<br>My name is Jhon Seal Serva</label>
+<p align="center">
+    Age:18 years old<br>
+    Grade:Senior HighSchool<br>
+    Strand: TVL - ICT
+</p>
+<div class="button">
+<button class="btn btn-primary">Hire Me!</button> <button onclick="skillJs()" class=" btn btn-light">Info
+</button>
+</div>
+</div>
+<br>
+<br>
+<div class="jss">
+    <img src="april.jpg" width="120px" height="120x"/>
+<label style="font-weight:509; color:white;">Hello Guys!<br>My name is April Ramos Corpuz</label>
+<p align="center">
+    Age:20 years old<br>
+    Grade:Senior HighSchool<br>
+    Strand: TVL - ICT
+</p>
+<div class="button">
+<button class="btn btn-primary">Hire Me!</button><button onclick="skillap()" class="btn btn-light">Info!</button>
+</div>
+</div>
+<br>
+<br>
+<div class="jss">
+    <img src="jero.jpg" width="120px" height="120x"/>
+<label style="font-weight:509; color:white;">Hello There!<br>My name is Jero Redoble</label>
+<p align="center">
+    Age:19 years old<br>
+    Grade:Senior HighSchool<br>
+    Strand: TVL - ICT
+</p>
+<div class="button">
+<button class="btn btn-primary">Hire Me!</button><button onclick="skilljr()"class="btn btn-light">Info!</button>
+</div>
+</div>
+<br>
+<br>
+<div class="jss">
+    <img src="russel.jpg" width="120px" height="120x"/>
+<label style="font-weight:509; color:white;">Hi There!<br>My name is Russel Angelo Ancheta</label>
+<p align="center">
+    Age:17 years old<br>
+    Grade:Senior HighSchool<br>
+    Strand: TVL - ICT
+</p>
+<div class="button">
+<button class="btn btn-primary">Hire Me!</button><button onclick="skillrs()" class="btn btn-light">Info!</button>
+</div>
+</div>
+<br>
+<br>
+<div class="jss">
+    <img src="patrick.jpg" width="120px" height="120x"/>
+<label style="font-weight:509; color:white;">Hi There!<br>My name is John Patrick Pedrera</label>
+<p align="center">
+    Age:17 years old<br>
+    Grade:Senior HighSchool<br>
+    Strand: TVL - ICT
+</p>
+<div class="button">
+<button class="btn btn-primary">Hire Me!</button><button onclick="skilljp()"class="btn btn-light">Info!</button>
+</div>
+</div>
+</div>
+<!--Skills-->
+<div style="display:none;" id="serva-skills">
+    <div id="jsserva"class="skills">
+   <h2>HTML</h2>        
+        <div class="container">
+            <div id="pat-bar" class="bar">95%</div>
+        </div>
+                    <h2>CSS</h2>        
+                <div class="container">
+            <div id="css-bar"class="bar">89%</div>
+        </div>
+                    <h2>JavaScript</h2>   
+                <div class="container">
+            <div id="english-bar"class="bar">30%</div>
+        </div>
+        <h2>Bootstrap</h2>
+                <div class="container">
+            <div id="filipino-bar"class="bar">80%</div>
+        </div>
+    </div>
+    <br>
+    <br>
+    
+    <div align="center" class="return">
+                <button onclick="previous()" class="btn btn-danger">Return</button>
+    </div>
+</div>
+<!--april-->
+<div style="display:none;" id="april-skills">
+    <div id="jsserva"class="skills">
+   <h2>Creativity</h2>        
+        <div class="container">
+            <div id="css-bar" class="bar">90%</div>
+        </div>
+          <h2>Social Skills</h2>        
+                <div class="container">
+            <div id="soc-bar"class="bar">85%</div>
+        </div>
+           <h2>Time Management</h2>   
+                <div class="container">
+            <div id="time-bar"class="bar">87%</div>
+        </div>
+        <h2>Reading</h2>
+                <div class="container">
+            <div id="read-bar"class="bar">89%</div>
+        </div>
+    </div>
+    <br>
+    <br>
+    
+    <div align="center" class="return">
+                <button onclick="previous()" class="btn btn-danger">Return</button>
+    </div>
+</div>
+<!--Jero-->
+<div style="display:none;" id="jero-skills">
+    <div id="jsserva"class="skills">
+   <h2>Using Cellphone</h2>        
+        <div class="container">
+            <div id="css1-bar" class="bar">100%</div>
+        </div>
+          <h2>Online Gaming</h2>        
+                <div class="container">
+            <div id="soc1-bar"class="bar">80%</div>
+        </div>
+           <h2>Coding</h2>   
+                <div class="container">
+            <div id="time1-bar"class="bar">30%</div>
+        </div>
+        <h2>Studies</h2>
+                <div class="container">
+            <div id="read1-bar"class="bar">50%</div>
+        </div>
+    </div>
+    <br>
+    <br>
+    
+    <div align="center" class="return">
+                <button onclick="previous()" class="btn btn-danger">Return</button>
+    </div>
+</div>
+<!--russel-->
+<div style="display:none;" id="russel-skills">
+    <div id="jsserva"class="skills">
+   <h2>Mobile Legend</h2>        
+        <div class="container">
+            <div id="css2-bar" class="bar">90%</div>
+        </div>
+          <h2>Simple Task</h2>        
+                <div class="container">
+            <div id="soc2-bar"class="bar">100%</div>
+        </div>
+           <h2>Coding</h2>   
+                <div class="container">
+            <div id="time2-bar"class="bar">20%</div>
+        </div>
+        <h2>Writing</h2>
+                <div class="container">
+            <div id="read2-bar"class="bar">80%</div>
+        </div>
+    </div>
+    <br>
+    <br>
+    
+    <div align="center" class="return">
+                <button onclick="previous()" class="btn btn-danger">Return</button>
+    </div>
+</div>
+<!--patrick-->
+<div style="display:none;" id="patrick-skills">
+    <div id="jsserva"class="skills">
+   <h2>Basketball</h2>        
+        <div class="container">
+            <div id="soc2-bar" class="bar">100%</div>
+        </div>
+          <h2>Mobile Legends</h2>        
+                <div class="container">
+            <div id="soc2-bar"class="bar">100%</div>
+        </div>
+           <h2>Participation</h2>   
+                <div class="container">
+            <div id="time3-bar"class="bar">97%</div>
+        </div>
+        <h2>Boxing</h2>
+                <div class="container">
+            <div id="read3-bar"class="bar">98%</div>
+        </div>
+    </div>
+    <br>
+    <br>
+    
+    <div align="center" class="return">
+                <button onclick="previous()" class="btn btn-danger">Return</button>
+    </div>
+</div>
+<br>
+<br>
+<footer style="background:royalblue; color:white; width:104vw;" align="center">
+    If there is any problem regarding to our website, contact us <a style="color:lightgreen;"href="https://www.facebook.com/jhonseal.payotserva">HERE</a>
+    <br>
+    <hr>
+    Copyrights 2023
+</footer>
+<!--sidebar-->
+    <div class="sidebar" id="sidebars">
+        
+<span onclick="hide()" id="exit">&#10094;</span>
+        <br>
+        <h1 style="color:white;"id="title" align="left">Portfolio</h1>
+        <ul>
+            <li onclick="home()"><a href="#"><i class="fas fa-house"></i>Home</a></li>
+            <br>
+                        <li><a href="dashboard.html" onclick="dash()"><i class="fa-solid fa-gauge-high "></i>Announcement</a></li>
+                        <br>
+            <li><a href="#"><i class="fa-brands fa-jedi-order"></i>Quizzes</a></li>
+            <br>
+            <li><a href="#" onclick="gone()"><i class="fas fa-car"></i>Logo</a></li>  
+            <br>
+            <li><a href="task.html"><i class="fa-solid fa-user"></i>Student's Task</a></li>            
+        </ul>
+    </div>
+    <div class="theme"><i class="fa-regular fa-lightbulb"></i>
+    <div class="theme-content">
+      <span onclick="dkmd()">Dark</span>
+      <span onclick="limd()">Light</span>
+      <span onclick="amd()">Auto</span>
+    </div>
+    </div>
+    <script>
+    const movers = document.querySelector('.jss');
+    let bol = false;
+    window.addEventListener("scroll", function(){
+        
+    })
+    //scroll
+    function rollDown(){
+     window.scrollTo(0,550);
+    }
+        //auto mode function
+            function amd() {
+if(darkMode.body.style.backgroundColor === "black"){
+    darkMode.body.style.backgroundColor="white";
+}
+else{
+darkMode.body.style.backgroundColor="black";    
+}
+if(darkMode.body.style.color === "white"){
+    darkMode.body.style.color="black";
+}
+else{
+    darkMode.body.style.color="white";
+}
+    }
+    //dark mode function
+    var darkMode = {
+ body:document.getElementById('body'),
+ sidebar: document.getElementById('sidebars'),
+ headers: document.getElementById('topper'),
+}
+    function dkmd() {
+darkMode.body.style.backgroundColor = "#252525";
+darkMode.body.style.color ="white";
+darkMode.sidebar.style.backgroundColor =" royalblue";
+darkMode.headers.style.backgroundColor ="royalblue";
+    }
+    //lightmode function
+        function limd() {
+darkMode.body.style.backgroundColor = "white";
+darkMode.body.style.color ="black";
+darkMode.sidebar.style.backgroundColor =" royalblue";
+darkMode.headers.style.backgroundColor ="royalblue";
+    }
+    //sidebar function
+        function show(){
+            document.getElementById('sidebars').style.width = "70%";
+            document.getElementById('sdbarbtn').style.display = "none";
+            document.getElementById('sidebars').style.zIndex="1";
+        }
+        //sidebar function hide
+        function hide(){
+            document.getElementById('sidebars').style.width="0%";
+            document.getElementById('sdbarbtn').style.display ="block";
+        }
+        //search function
+        function myFunc(){
+            var x = document.getElementById('srch');
+            if(x.style.display == "none"){
+                x.style.display = "block";
+            }
+            else{
+                x.style.display = "none";
+            }
+        }
+        //skills bar
+        function skillJs() {
+            document.getElementById('flexer').style.display = "none";
+            document.getElementById('serva-skills').style.display = "block";
+        }
+        //return button
+        function previous(){
+            document.getElementById('serva-skills').style.display = "none";
+            document.getElementById('flexer').style.display = "block";
+        }
+        //april-skills
+        function skillap() {
+            document.getElementById('flexer').style.display = "none";
+            document.getElementById('april-skills').style.display = "block";
+        }
+        //jero skills
+         function skilljr() {
+            document.getElementById('flexer').style.display = "none";
+            document.getElementById('jero-skills').style.display = "block";
+        }
+        //russel skills
+         function skillrs() {
+            document.getElementById('flexer').style.display = "none";
+            document.getElementById('russel-skills').style.display = "block";
+        }
+        //Patrick
+                 function skilljp() {
+            document.getElementById('flexer').style.display = "none";
+            document.getElementById('patrick-skills').style.display = "block";
+        }
+        //return button
+        function previous(){
+            document.getElementById('april-skills').style.display = "none";
+            document.getElementById('flexer').style.display = "block";
+            document.getElementById('serva-skills').style.display = "none";
+        document.getElementById('jero-skills').style.display = "none";
+                document.getElementById('russel-skills').style.display = "none";
+                            document.getElementById('patrick-skills').style.display = "none";
+        }
+    </script>
+    </body>
+</html>

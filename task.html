@@ -1,0 +1,406 @@
+<html>
+    <head>
+        <meta name="viewport", content="width:device-width,initial-scale=1.0">
+<link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+            <link rel="stylesheet" href="./fontawesome-free-6.4.2-web/css/all.css">
+            <link rel="stylesheet" href="bootstrap.css">
+                    <title>E Portfolio</title>
+<style>
+/*sidebar*/
+    .sidebar{
+        width:0%;
+        height: 102vh;
+        background: linear-gradient(310deg, royalblue, royalblue,white);
+        transition: width 1.5s;
+        transition-delay: 0.1s;
+        overflow-y: auto;
+        color:white;
+        margin: 0;
+        z-index: 2;
+        top: 0%;
+        border-radius:5px;
+position: absolute;
+position:fixed;
+    }
+    body{
+        margin:0;
+        padding: 0;
+        overflow-y: auto;
+        background: #d3d3d3;
+        min-height: 120vh;
+        position: relative;
+        padding-bottom: 6.7rem;
+    }
+    html{
+        height: 120vh;
+    }
+    footer{
+        position: absolute;
+        bottom:0;
+    }
+    /*this is the menu button*/
+    #sdbarbtn{
+        position: absolute;
+        top:0%;
+        width: 20%;
+        height: 50px;
+        font-size: 33px;
+        text-align:center;
+        z-index: 1;
+        color: white;
+    }
+    /*back arrow or prev in the sidebar*/
+    #exit{
+        float:right;
+    }
+    /*sidebar navigation*/
+.sidebar a{
+    text-decoration: none;
+    display: block;
+    color: white;
+    transition: 1s;
+    border-bottom:1px solid black;
+}
+.sidebar > ul{
+   list-style-type: none; 
+   margin:2px;
+   padding: 0;
+}
+.sidebar > ul > li > a{
+    padding: 14px 16px;
+}
+.sidebar a:hover{
+    width: 90%;
+   background: white;
+   border-radius: 5px;
+   color: royalblue;
+   margin: auto;
+}
+.sidebar i{
+    float: right;
+}
+/*container for search, login etc*/
+.header{
+    position: absolute;
+    top: 0%;
+    width: 104%;
+    height: 50px;
+    align-content: center;
+    border-bottom: 1px solid blue;
+    position: sticky;
+    z-index: 1;
+    background: white;
+    background: royalblue;
+}
+/*search icon*/
+#search{
+        position: absolute;
+        top:12px;
+        right:55%;
+        width: 20%
+        height: 50px;
+        font-size: 20px;
+        text-align:center;
+        z-index: 1;
+        align-item:center;
+        align-content: center;
+        color: white;
+}
+#istg{
+    position: absolute;
+    right: 10%;
+    top: 10px;
+}
+/*login button*/
+#login{
+    background: royalblue;
+    border:1px solid white;
+    width: 70px;
+    height: 35px;
+    color: white;
+    border-radius:8px;
+}
+/*signup button*/
+#signup{
+        background: white;
+    border:1px solid royalblue;
+    width: 70px;
+    height: 35px;
+    color: royalblue;
+    border-radius:8px;
+}
+/*portfolio title*/
+#title{
+    border-bottom: 2px solid royalblue;
+    text-shadow:2px 2px 4px royalblue;
+}
+/*search bar*/
+#srch{
+    width: 20%;
+    height: 30px;
+    font-size: +10;
+    position: absolute;
+    top: 12;
+    border-radius: 9px;
+    right: 65%;
+    border-bottom: 1px solid white;
+    border-right:1px solid white;
+    border-top: none;
+    border-left:none;
+    display: none;
+}
+/* back arrow in the sidenav*/
+#exit{
+    font-size:+30;
+    color: white;
+}
+/*small light icon in the right bottom*/
+.theme{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    position: relative;
+    position: fixed;
+    right:5%;
+    background: royalblue;
+    color:white;
+    top:85vh;
+    text-align:center;
+    opacity: 0.4;
+    z-index: 0;
+}
+.theme>i{
+ margin:auto;
+ position: relative;
+ top:20%;
+}
+.theme:hover>i{
+    top: 30%;
+}
+.theme-content{
+    background: royalblue;
+    position: relative;
+    display: none;
+    top:-290%;
+    right: 50%;
+    width: 80px;
+    font-size:+20;
+    border-radius: 10px;
+    transition: 1s;
+}
+.theme:hover > .theme-content{
+    display: block;
+}
+.theme-content > span:hover{
+    background: white;
+    color:black;
+}
+.theme:hover{
+    opacity:1.0;
+}
+@media (min-width:400px) {
+    body{
+        font-size:+23;
+    }
+    #signup{
+        width:80px;
+    }
+    #login{
+        width: 80px;
+    }
+    body{
+        padding-bottom: 6.8rem;
+    }
+}
+      @media (min-width:950px) {
+          .jss > img{
+              float:left;
+              width: 200px;
+              height: 200px;
+          }
+          .button{
+              display: flex;
+              justify-content: space-between;
+              ;
+          }
+          #signup{
+              width: 90px;
+          }
+          #login{
+              width:90px;
+          }
+          #search{
+              right:3%;
+          }
+          #srch{
+              width: 30%;
+              right: 40%;
+              display:block;
+          }
+          #exit{
+              display: block;
+          }
+          body{
+              font-size:+25;
+       margin:0;
+       padding: 0;
+       padding-bottom: 6.9rem;
+          }
+          #sdbarbtn{
+              font-size:36px;
+              width:22%;
+          }
+          .sidebar{
+              font-size:+20;
+              max-width: 25%;
+          }
+          .sidebar>ul{
+              font-size:+20;
+          }
+          #landpage{
+              height: 20%;
+              width: 75%;
+              text-align: center;
+             background-size:100% 100%;
+          }
+}
+table, td, tr{
+    border:2px solid #252525;
+    text-align: center;
+    padding: 12px;
+}
+.poss-paper{
+    margin-top:25%;
+}
+      </style>
+</head>
+<body id="body">
+    <!--search icon-->
+    <div class="header " id="topper"><span id="search" onclick="myFunc()"><i class="fas fa-search"></i></span>
+ <span id="istg"><button id="login">Login</button>
+    <button id="signup">Signup</button></span>
+                 <input id="srch"type="search" placeholder="Search..."/>
+                          <span onclick="show()" id="sdbarbtn"><label>&#9776;</label></span>
+    </div>
+    <!--task.html-->
+    <h1 align="center" style="font-family: 'poppins' , serif; font-weight:800;">Student's Task</h1>
+    
+<div class="poss-paper">
+    <div style="width:80%; margin:auto; background:white; border-radius:13px; text-align:center;"><h1>Position Paper</h1></div>
+    <table border="2" width="90%" style="margin:auto;">
+        <tr>
+    <td style="width:60%;">Is Animal Testing Morally Justifiable?</td>
+    <td style="width:40%;">
+        <a href="jss-corpuz.html" style="color:white">
+            <button class="btn btn-primary">Read Here</button></td>
+        </a>
+    </tr>
+        <tr>
+    <td style="width:60%;">Is Animal Testing Morally Justifiable?</td>
+    <td style="width:40%;"><button class="btn btn-primary">Read Here</button></td>
+    </tr>    
+</table>
+</div>
+<br>
+<br>
+<footer style="background:royalblue; color:white; width:104vw;" align="center">
+    If there is any problem regarding to our website, contact us <a style="color:lightgreen;"href="https://www.facebook.com/jhonseal.payotserva">HERE</a>
+    <br>
+    <hr>
+    Copyrights 2023
+</footer>
+<!--sidebar-->
+    <div class="sidebar" id="sidebars">
+        
+<span onclick="hide()" id="exit">&#10094;</span>
+        <br>
+        <h1 style="color:white;"id="title" align="left">Portfolio</h1>
+        <ul>
+            <li onclick="home()"><a href="#"><i class="fas fa-house"></i>Home</a></li>
+            <br>
+                        <li><a href="dashboard.html" onclick="dash()"><i class="fa-solid fa-gauge-high "></i>Announcement</a></li>
+                        <br>
+            <li><a href="#"><i class="fa-brands fa-jedi-order"></i>Quizzes</a></li>
+            <br>
+            <li><a href="#" onclick="gone()"><i class="fas fa-car"></i>Logo</a></li>  
+            <br>
+            <li><a href="#"><i class="fa-solid fa-user"></i>Student's Task</a></li>            
+        </ul>
+    </div>
+    <div class="theme"><i class="fa-regular fa-lightbulb"></i>
+    <div class="theme-content">
+      <span onclick="dkmd()">Dark</span>
+      <span onclick="limd()">Light</span>
+      <span onclick="amd()">Auto</span>
+    </div>
+    </div>
+    <script>
+    const movers = document.querySelector('.jss');
+    let bol = false;
+    window.addEventListener("scroll", function(){
+        
+    })
+    //scroll
+    function rollDown(){
+     window.scrollTo(0,550);
+    }
+        //auto mode function
+            function amd() {
+if(darkMode.body.style.backgroundColor === "black"){
+    darkMode.body.style.backgroundColor="white";
+}
+else{
+darkMode.body.style.backgroundColor="black";    
+}
+if(darkMode.body.style.color === "white"){
+    darkMode.body.style.color="black";
+}
+else{
+    darkMode.body.style.color="white";
+}
+    }
+    //dark mode function
+    var darkMode = {
+ body:document.getElementById('body'),
+ sidebar: document.getElementById('sidebars'),
+ headers: document.getElementById('topper'),
+}
+    function dkmd() {
+darkMode.body.style.backgroundColor = "#252525";
+darkMode.body.style.color ="white";
+darkMode.sidebar.style.backgroundColor =" royalblue";
+darkMode.headers.style.backgroundColor ="royalblue";
+    }
+    //lightmode function
+        function limd() {
+darkMode.body.style.backgroundColor = "white";
+darkMode.body.style.color ="#252525";
+darkMode.sidebar.style.backgroundColor =" royalblue";
+darkMode.headers.style.backgroundColor ="royalblue";
+    }
+    //sidebar function
+        function show(){
+            document.getElementById('sidebars').style.width = "70%";
+            document.getElementById('sdbarbtn').style.display = "none";
+            document.getElementById('sidebars').style.zIndex="1";
+        }
+        //sidebar function hide
+        function hide(){
+            document.getElementById('sidebars').style.width="0%";
+            document.getElementById('sdbarbtn').style.display ="block";
+        }
+        //search function
+        function myFunc(){
+            var x = document.getElementById('srch');
+            if(x.style.display == "none"){
+                x.style.display = "block";
+            }
+            else{
+                x.style.display = "none";
+            }
+        }
+ </script>
+    </body>
+</html>
