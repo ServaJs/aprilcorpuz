@@ -1,0 +1,154 @@
+<html>
+    <meta name="viewport", content="width:device-width,initial-scale=1.0">
+        <head>
+            <link rel="stylesheet" href="bootstrap.css">
+                       <link rel="stylesheet" href="./bootstrap-5.3.2-dist/css/bootstrap.css">
+            <link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+            <link rel="stylesheet" href="./fontawesome-free-6.4.2-web/css/all.css">
+            <style>
+                body{
+                    background:#FBFCFA ;
+                    margin:10%;
+                    font-size:12pt;
+                    font-family: Arial, Helvetica, Sans-Serif;
+               line-height: 2;
+               overflow-y:auto;
+               width: 100%;
+                }
+                p{
+                    line-height:2;
+                }
+                #indent{
+                    text-indent:10%;
+                }
+                                .theme{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    position: relative;
+    position: fixed;
+    right:5%;
+    background: royalblue;
+    color:white;
+    top:85vh;
+    text-align:center;
+    opacity: 0.4;
+    z-index: 0;
+}
+.theme>i{
+ margin:auto;
+ position: relative;
+ top:20%;
+}
+.theme:hover>i{
+    top: 30%;
+}
+.theme-content{
+    background: royalblue;
+    position: relative;
+    display: none;
+    top:-290%;
+    right: 50%;
+    width: 80px;
+    font-size:+20;
+    border-radius: 10px;
+    transition: 1s;
+}
+.theme:hover > .theme-content{
+    display: block;
+}
+.theme-content > span:hover{
+    background: white;
+    color:black;
+}
+.theme:hover{
+    opacity:1.0;
+}
+            </style>
+        </head>
+        <body id="body">
+            <a href="task.html">Back To Page</a>
+            <p>Date: November 16, 2023
+            <br>
+Names: Patrick Pedrera<br>
+Subject: Reading and Writing 
+<br>
+Grade & Section: 12 - Lapu-Lapu
+<br>
+Task Accomplished: Position Paper 
+<br>
+Faculty: Ms. Verlan Jane L. Garcia</p>
+<p align="center"><b>Position Paper 1</b></p>
+<p>
+    <b>TOPIC</b>: Is Death Penalty ever Justified?
+   <br>
+   <b>POSITION:</b></b> YES
+                          <br>
+<b>ISSUE SUMMARY</b>   : Death Penalty also known as Capital Punishment.Capital Punishment, execution of an offender sentence by a court of law of a criminal offense. Death Penalty should be impose or restored to defers future merders.this is the highest and strongest punishment to prevent and stop terrible crimes and also help to control people from committing the same crime.
+<p id="indent">
+Why death penalty needs to be restored?
+In the 1600's, the American colonies used the Death Penalty as a punishment for most serious crimes. The Death Penalty is considered a state issue. 27  U.S. states do not the U.S. government has imposed moratorium in three Death Penalty states. This means that the individuals can  still be sentoced to Death but primary only in the case of severe crimes, like murder.
+</p>
+<p id="indent">
+ The death penalty in the Philippines was first abolished in 1987, making the Philippines the first country in Asia to terminate death penalty. Yet, in less than a year, with the promulgation of a new Constitution after the ouster of the Marcos dictatorship, the military establishment lobbied for its imposition to combat the alleged intensifying offensives of the Communist Party of the Philippines/New People’s Army guerillas.
+</p>
+<p id="indent">
+Britain influenced America’s use of the death penalty more than any other country. When European settlers came to the new world, they brought the practice of capital punishment. The first recorded execution in the new colonies was that of Captain George Kendall in the Jamestown colony of Virginia in 1608. Kendall was executed for being a spy for Spain. In 1612, Virginia Governor Sir Thomas Dale enacted the Divine, Moral and Martial Laws, which provided the death penalty for even minor offenses such as stealing grapes, killing chickens, and trading with Indians.
+</p>
+<p id="indent">
+          DILG Secretary Eduardo M. Año - death penalty should be given to grug lords, grug syndicate and the heinous crimes committed by the police or men in uniform who are supposed to enforce the law They are the ones who committed the heinous crime. That should be the death penalty!Conclusion and possible solution.
+<p id="indent">
+As per discussed, There same to be two popular arguments in favor of Death Penalty.
+One is that the cold fear of being put to Death will defer others frome commiting the same terrible crimes. And the second is that Death Penalty appears more economical than the alternatives, which is life in prisonment.
+</p>
+<p id="indent">
+Conclusively, Death Penalty should be restored as Death Penalty determs future merders. Our society has always use punishment to discourage would-be criminals from unlawful action. Since our society has the highest interest in preventing merders, it should be use the strongest punishment available to defer murder and use that is the Death Penalty.
+</p>
+
+    <div class="theme"><i class="fa-regular fa-lightbulb"></i>
+    <div class="theme-content">
+      <span onclick="dkmd()">Dark</span>
+      <span onclick="limd()">Light</span>
+      <span onclick="amd()">Auto</span>
+    </div>
+    </div>
+    <script>
+                //auto mode function
+            function amd() {
+if(darkMode.body.style.backgroundColor === "black"){
+    darkMode.body.style.backgroundColor="white";
+}
+else{
+darkMode.body.style.backgroundColor="black";    
+}
+if(darkMode.body.style.color === "white"){
+    darkMode.body.style.color="black";
+}
+else{
+    darkMode.body.style.color="white";
+}
+    }
+    //dark mode function
+    var darkMode = {
+ body:document.getElementById('body'),
+ sidebar: document.getElementById('sidebars'),
+ headers: document.getElementById('topper'),
+}
+    function dkmd() {
+darkMode.body.style.backgroundColor = "#252525";
+darkMode.body.style.color ="white";
+darkMode.sidebar.style.backgroundColor =" royalblue";
+darkMode.headers.style.backgroundColor ="royalblue";
+    }
+    //lightmode function
+        function limd() {
+darkMode.body.style.backgroundColor = "white";
+darkMode.body.style.color ="#252525";
+darkMode.sidebar.style.backgroundColor =" royalblue";
+darkMode.headers.style.backgroundColor ="royalblue";
+    }
+    </script>
+    </body>
+</html>
