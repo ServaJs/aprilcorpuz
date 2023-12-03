@@ -1,0 +1,97 @@
+<html>
+    <meta name="viewport"
+    content="width:device-width, initial-scale=1.0">
+    <head>
+        <style>
+.paragraph{
+    position:absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    z-index:1;
+    color: black;
+    overflow: scroll;
+    color: #252525;
+}
+.bg{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    visibility: hidden;
+}
+                p{
+                    line-height:1.5;
+                    margin: 5%;
+                    font-weight: 350;
+                }
+                #indent{
+                    text-indent:10%;
+                }
+               span{
+                    float: right;
+                    z-index: 2;
+                    position:relative;
+                }
+                .container{
+                    width: 60px;
+                    height:30px;
+                    border-radius:50px;
+                    border: 3px solid blue;
+                    overflow: hidden;
+                }
+                .circle{
+                    width: 30px;
+                    height: 30px;
+                    float: left;
+                    background: royalblue;
+                    border-radius: 50%;
+                }
+        </style>
+    </head>
+    <body>
+                    <a href="index.html">Back to Page</a>
+        <span>
+            <div class="container" onclick="movers()">
+                <div class="circle" id="move"></div>
+            </div>
+        </span>
+<div class="bg"><img id="background" src="yourname.jpg" width="100%" height="110%"></div>
+<div class="paragraph" id="graph">
+    <h3 align="center"><q>Kimi no Nawa(Your Name)</q><br>By: Makoto Shinkai</h3>
+    <p id="indent">
+        The novel "Kimi no Nawa" also known as "Your Name" from the Japanese author Makoto Shinkai, published in 2016. This novel 
+adaptation of the acclaimed anime film, invites readers into a world where the threads of destiny intertwine. 
+    </p>
+    <p id="indent">
+        "Your Name" follows the story of Mitsuha Miyamizu, a high school girl living in a rural town of Itomori and Taki Tachibana, a high school boy residing in Tokyo. The two teenagers who mysteriously switch bodies and experiencing each other's lives. As they navigate this unusual phenomenon, the novel beautifully explores themes of love and destiny, creating a captivating blend of romance and fantasy. 
+    </p>
+    <p id="indent">
+        Makoto Shinkai's skill in expanding the storyline and characters surpasses what the animated film could portray. The novel provides an intimate exploration of Taki and Mitsuha's thoughts and emotions, providing a deeper understanding of their experiences and inner struggles. Shinkai's vivid descriptive writing enhance the atmospheric aspects, allowing readers to imagine the settings vividly and establish a strong connection with the story. However, the time-travel elements in "Your Name" can be intricate and challenging for some readers to understand. The mixing of timelines may cause confusion, particularly for those that are not familiar with this genre or  nonlinear storytelling.
+    </p>
+    <p id="indent">
+        This novel will be loved by the  readers who loves romance and supernatural phenomenon, reader will enjoy the unpredictable of the story and a sudden plot twist.
+"Your Name" novel version is providing a more personal and detailed representation of Taki and Mitsuha's exceptional connection. Makoto Shinkai's great storytelling and descriptive skills enhance the novel and makes the novel stand out in fantasy romance. Even though there might be challenges with the detailed time-travel elements. In conclusion, "Your Name" is a great masterpiece because it gives reader a unique concept that they never read before. The author made a great work, the ending will make you think what's next or what would happen to them after they met.
+    </p>
+</div>
+<script>
+var x = document.getElementById('move');
+var y = document.getElementById('background');
+var z = document.getElementById('graph');
+    function movers(){
+        if(x.style.float === "left" ){
+            x.style.float = "right";
+           y.style.visibility = "visible";
+           z.style.color = "white";
+        }
+        else{
+            x.style.float = "left";
+            y.style.visibility = "hidden";
+            z.style.color = "#252525";
+        }
+    }
+</script>
+    </body>
+</html>
