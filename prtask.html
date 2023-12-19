@@ -4,7 +4,7 @@
 <link rel="stylesheet" 
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
             <link rel="stylesheet" href="./fontawesome-free-6.4.2-web/css/all.css">
-            <link rel="stylesheet" href="bootstrap.css">
+            <link rel="stylesheet" href="./bootstrap-5.3.2-dist/css/bootstrap.css">
                     <title>E Portfolio</title>
 <style>
 /*sidebar*/
@@ -338,10 +338,12 @@ display: flex;
 justify-content: center;
 text-align: center;
 align-items: center;
+position: relative;
+top: -10%;
 }
 .task-content{
     width: 100%;
-    height: 50%;
+    height: 65%;
     position: fixed;
     top:-100%;
     left: 0;
@@ -349,6 +351,7 @@ align-items: center;
     background: white;
     color:black;
     transition: 0.9s;
+    z-index: 3;
     overflow: scroll;
 }
 .close-container{
@@ -364,6 +367,12 @@ table, td, tr{
 .poss-paper{
     margin-top:25%;
 }
+#close-btn{
+    width: 180px;
+    height: 70px;
+    position: absolute;
+    top: 65%;
+}
       </style>
 </head>
 <body id="body">
@@ -375,6 +384,9 @@ table, td, tr{
                           <span onclick="show()" id="sdbarbtn"><label>&#9776;</label></span>
     </div>
 <!--Task-->
+<div class="alert alert-danger">
+    You need to click the left corner of the close button that will apear after the dropdown
+</div>
 <div class="ptsk">
     <div class="task" id="tasks" onclick="goDown()">
         <b id="mid">Position<br>Paper</b>
@@ -416,9 +428,9 @@ table, td, tr{
             </div>
             </div>
             </div>
-      <div class="task" onclick="goDown()">
+      <div class="task" onclick="goDowns()">
         <b id="mid">Book<br>Review</b>
-        <div class="task-content" id="task-contents">
+        <div class="task-content" id="task-contentss">
         <div class="poss-paper">
     <div style="width:80%; margin:auto; background:#252525; border-radius:13px;color:white;text-align:center;"><h1>Book Review</h1></div>
     <table width="90%" style="margin:auto;">
@@ -450,9 +462,7 @@ table, td, tr{
             </div>        
     </div>
 </div>
-    <div class="close-container">
-  <div id="close-btn" onclick="goUp()" align="center" class="close btn btn-dark">CLOSE</div>
-</div>
+      <button style="visibility:hidden;"id="close-btn" onclick="daniel()">Click here to Close</button>
 <br>
 <br>
 <footer style="background:royalblue; color:white; width:104vw;" align="center">
@@ -491,9 +501,18 @@ table, td, tr{
         document.getElementById('close-btn').style.visibility = "visible";
         document.getElementById('task-contents').style.top = "5%";
     }
+    function goDowns(){
+        document.getElementById('close-btn').style.visibility = "visible";
+        document.getElementById('task-contentss').style.top = "5%";
+    }
     function goUp(){
         document.getElementById('close-btn').style.visibility = "hidden";
         document.getElementById('task-contents').style.top = "-100%";
+    }
+    function daniel(){
+        document.getElementById('task-contents').style.top = "-100%";
+        document.getElementById('task-contentss').style.top = "-100%";
+         document.getElementById('close-btn').style.visibility = "hidden";
     }
         //auto mode function
             function amd() {
