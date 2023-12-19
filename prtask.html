@@ -375,9 +375,6 @@ table, td, tr{
                           <span onclick="show()" id="sdbarbtn"><label>&#9776;</label></span>
     </div>
 <!--Task-->
-<div class="close-container">
-  <div id="close-btn" onclick="goUp()" align="center" class="close btn btn-dark">CLOSE</div>
-</div>
 <div class="ptsk">
     <div class="task" id="tasks" onclick="goDown()">
         <b id="mid">Position<br>Paper</b>
@@ -453,6 +450,9 @@ table, td, tr{
             </div>        
     </div>
 </div>
+    <div class="close-container">
+  <div id="close-btn" onclick="goUp()" align="center" class="close btn btn-dark">CLOSE</div>
+</div>
 <br>
 <br>
 <footer style="background:royalblue; color:white; width:104vw;" align="center">
@@ -489,7 +489,7 @@ table, td, tr{
     <script>
     function goDown(){
         document.getElementById('close-btn').style.visibility = "visible";
-        document.getElementById('task-contents').style.top = "15%";
+        document.getElementById('task-contents').style.top = "5%";
     }
     function goUp(){
         document.getElementById('close-btn').style.visibility = "hidden";
