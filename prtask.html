@@ -351,9 +351,6 @@ align-items: center;
     transition: 0.9s;
     overflow: scroll;
 }
-.task:hover .task-content{
-    top:15%;
-}
 .close-container{
     width: 100%;
     text-align: center;
@@ -492,6 +489,7 @@ table, td, tr{
     <script>
     function goDown(){
         document.getElementById('close-btn').style.visibility = "visible";
+        document.getElementById('task-contents').style.top = "15%";
     }
     function goUp(){
         document.getElementById('close-btn').style.visibility = "hidden";
