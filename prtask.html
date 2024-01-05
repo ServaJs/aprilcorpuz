@@ -5,6 +5,7 @@
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
             <link rel="stylesheet" href="./fontawesome-free-6.4.2-web/css/all.css">
             <link rel="stylesheet" href="bootstrap.css">
+            <link rel="stylesheet" href="./bootstrap-5.3.2-dist/css/bootstrap.css">
                     <title>E Portfolio</title>
 <style>
 /*sidebar*/
@@ -326,7 +327,7 @@ position:fixed;
 }
 .ptsk{
     position: relative;
-    top:10%;
+    top:20%;
     display: flex;
     flex-wrap: wrap;
     width: 90%;
@@ -353,7 +354,8 @@ top: -10%;
     color:black;
     transition: 0.9s;
     z-index: 3;
-    overflow: scroll;
+    overflow: auto;
+    padding-bottom: 2.5rem;
 }
 .close-container{
     width: 100%;
@@ -369,10 +371,17 @@ table, td, tr{
     margin-top:25%;
 }
 #close-btn{
-    width: 180px;
+    width: 100%;
     height: 70px;
     position: fixed;
     top: 76%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn23 {
+    width: 50%;
+    height: 70px;
 }
       </style>
 </head>
@@ -385,9 +394,6 @@ table, td, tr{
                           <span onclick="show()" id="sdbarbtn"><label>&#9776;</label></span>
     </div>
 <!--Task-->
-<div class="alert alert-danger">
-    You need to click the left corner of the close button that will apear after the dropdown
-</div>
 <div class="ptsk">
     <div class="task" id="tasks" onclick="goDown()">
         <b id="mid">Position<br>Paper</b>
@@ -462,11 +468,45 @@ table, td, tr{
             </div>
             </div>        
     </div>
-    <div class="task" id="tasks" onclick="goDown()">
-     <b id="mid">Book<br>Review</b>
+     <div class="task" onclick="goDownResume()">
+        <b id="mid">Resume</b>
+        <div class="task-content" id="task-contents-resume">
+        <div class="poss-paper">
+    <div style="width:80%; margin:auto; background:#252525; border-radius:13px;color:white;text-align:center;"><h1>Resume</h1></div>
+    <table width="90%" style="margin:auto;">
+        <tr>
+    <td style="width:60%;">Jhon Seal Serva
+    </td>
+    <td style="width:40%;">
+        <a href="resume-js.html" style="color:white">
+            <button class="btn btn-primary">View</button></td>
+        </a>
+    </tr>
+        <tr>
+    <td style="width:60%;">April Corpuz</td>
+    <td style="width:40%;">        <a href="resume-ap.html" style="color:white">
+            <button class="btn btn-primary">View</button></a></td></tr>
+             <tr>
+    <td style="width:60%;">Jero Redoble</td>
+    <td style="width:40%;">        <a href="resume-jero.html" style="color:white">
+            <button class="btn btn-primary">View</button></a></td></tr>
+ <tr>
+    <td style="width:60%;">Russel Angelo Ancheta</td>
+    <td style="width:40%;">        <a href="resume-russ.html" style="color:white">
+            <button class="btn btn-primary">View</button></a></td></tr>
+ <tr>
+    <td style="width:60%;">John Patrick Pedrera</td>
+    <td style="width:40%;">        <a href="resume-jp.html" style="color:white">
+            <button class="btn btn-primary">View</button></a></td></tr>
+</table>
+            
+            </div>
+            </div>        
     </div>
 </div>
-      <button style="visibility:hidden;"id="close-btn" class="btn btn-danger" onclick="daniel()">Click here to Close</button>
+      <div id="close-btn" onclick="daniel()" style="visibility:hidden">
+          <button class="btn btn-danger btn23" >Click here to Close</button>
+      </div>
 <br>
 <br>
 <footer style="background:royalblue; color:white; width:104vw;" align="center">
@@ -509,6 +549,10 @@ table, td, tr{
         document.getElementById('close-btn').style.visibility = "visible";
         document.getElementById('task-contentss').style.top = "5%";
     }
+    function goDownResume(){
+        document.getElementById('close-btn').style.visibility = "visible";
+        document.getElementById('task-contents-resume').style.top = "5%";
+    }
     function goUp(){
         document.getElementById('close-btn').style.visibility = "hidden";
         document.getElementById('task-contents').style.top = "-100%";
@@ -516,6 +560,7 @@ table, td, tr{
     function daniel(){
         document.getElementById('task-contents').style.top = "-100%";
         document.getElementById('task-contentss').style.top = "-100%";
+        document.getElementById('task-contents-resume').style.top = "-100%";
          document.getElementById('close-btn').style.visibility = "hidden";
     }
         //auto mode function
