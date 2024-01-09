@@ -17,12 +17,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
             }
             .container{
                 padding-top: 2.5rem;
-                width: 360px;
-                height: 100%;
+                width: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                overflow: hidden;
                 position: relative;
             }
             .content{
@@ -92,14 +90,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
            }
            #quotes{
              font-size: 8.5pt;
-             margin-left: -30%;
+             margin-left: -35%;
              margin-top:
              4%;
              text-align: center;
            }
            .btn-container{
                position: relative;
-               left: 15%;
+               left: 13%;
            }
            .btn1{
                font-size: 6pt;
@@ -130,105 +128,72 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
                display: block;
                
            }
+           #big{
+               display: none;
+           } #notes4{
+               display: none;
+           }
 @media (min-width:400px){
            .container{
-               width: 400px;
-               height: 100%;
+               width: 100%;
            }
            .content{
-               width: 400px;
-               height: 400px;
+               width: 420px;
+               height: 360px;
            }
            .note1{
-           font-size: +18;
-           }
+           font-size: 10.5pt;
+       }
            .note2{
-               font-size: +26;
-           }
-           #quotes{
-               font-size: 12pt;
-           }
-           .btn1{
-               font-size: 8pt;
-           }
-      }
-      @media (min-width:600px){
-         .container{
-             width: 600px;
-         }
-         .content{
-             width: 600px;
-             height: 600px;
-         }
-         .bg-circle{
-             width:560px;
-             height:560px;
-         }
-         .img{
-            width: 350px;
-            height: 350px;
-         }
-         img{
-            width: 350px;
-            height: 350px;
-         }
-                   .note1{
-           font-size: +22;
-           }
-           .note2{
-               font-size: +30;
-           }
-           #quotes{
                font-size: 16pt;
            }
-           .menu-contents{
-               height: 50px;
-               font-size: 24pt;
-           }
-           .btn1{
-               font-size: 10pt;
-           }
-      }
-      @media (min-width:900px) {
-          .container{
-             width: 800px;
-         }
-         .content{
-             width: 800px;
-             height: 800px;
-         }
-         .bg-circle{
-             width:740px;
-             height:740px;
-         }
-         .img{
-            width: 450px;
-            height: 450px;
-         }
-         img{
-            width: 450px;
-            height: 450px;
-         }
-                   .note1{
-           font-size: +26;
-           }
-           .note2{
-               font-size: +34;
-           }
            #quotes{
-               font-size: 20pt;
+               font-size: 9.5pt;
            }
-           .menu-contents{
-               height: 70px;
-               font-size: 28pt;
-           }
-           .notes{
-               top:30%;
-           }
-           .btn1{
-               font-size: 12pt;
+           .bg-circle{
+               width: 380px;
+               height: 380px;
            }
       }
+      @media (min-width:900px){
+          .container{
+              position: absolute;
+              right: 0;
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+          }
+.content{
+    margin-right: 10%;
+   margin-top: 20%;
+}
+#big{
+    display: block;
+    position: absolute;
+    z-index: 1;
+    color: royalblue;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 2;
+    font-family: 'poppins',serif;
+    left: -20%;
+    font-size: 50pt;
+}
+#notes4{
+    display: block;
+    position: absolute;
+    z-index: ;
+    color: #252525;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 2;
+    font-family: 'poppins',serif;
+    left: -18%;
+    top:60%;
+    font-size: 14pt;
+}
+}
+
         </style>
     </head>
     <body>
@@ -241,22 +206,27 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
             </div>
         </header>
         <div class="container">
+                                            <p id="big">
+                RESUME
+                <p id="notes4">
+                    Click the download button<br> to view the <q>RESUME</q>
+                </p>
+            </p>
             <div class="content">
                            <div class="notes">
              <div class="note1">
-             PSYCHOLOGIST
-             </div>
+             PSYCHOLOGIST</div>
              <div class="note2">
               APRIL<br>
               CORPUZ
              </div>
-            <p id="quotes">
+<p id="quotes">
                 Do something today<br>
                 that your future self <br/> will thank you for.
             </p>
              <br>
-             <div class="btn-container">
-            <a href="april-resume.jpg" download>
+            <div class="btn-container">
+            <a href="corpuz.pdf" download>
             <button class="btn btn-primary btn1" type="submit">DOWNLOAD</button>
             </a>
              </div>
