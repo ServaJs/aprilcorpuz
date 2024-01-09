@@ -1,0 +1,255 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta name="viewport", content="width:device-width,initial-scale=1.0">
+<link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+            <link rel="stylesheet" href="./fontawesome-free-6.4.2-web/css/all.css">
+            <link rel="stylesheet" href="bootstrap.css">
+            <link rel="stylesheet" href="./bootstrap-5.3.2-dist/css/bootstrap.css">
+        <style>
+            header{
+                width: 100%;
+                height: 10vw;
+                font-size: 8vw;
+                background: linear-gradient(120deg, royalblue, skyblue);
+                color: white;padding-left: 5%;
+            }
+            .container{
+                padding-top: 2.5rem;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+            }
+            .content{
+                margin: auto;
+                border: 2px solid royalblue;
+                width: 380px;
+                height: 340px;
+                position: relative;
+                overflow: hidden;
+            }
+            .bg-circle{
+                width: 280px;
+                height: 280px;
+                background: #004AAD;
+                position: absolute;
+                bottom: 21%;
+                border-radius: 50%;
+                left: 60%;
+            }
+            .img{
+                width: 170px;
+                height: 168px;
+                border: 3px solid white;
+                position: absolute;
+                bottom:19%;
+                right: 7%;
+                border-radius: 50%;
+                background: transparent;
+                perspective: 1000px;
+                overflow: hidden;
+            }
+            img{
+                width: 170px;
+                height: 168px;
+            }
+            .img-inner{
+                width: 100%;
+                height: 100%;
+                transition: transform 0.6s;
+             transform-style: preserve-3d;
+            }
+            .img:hover .img-inner{
+                transform: rotateY(180deg);
+            }
+            .img-front, .img-back{
+                -backface-visibility: hidden;
+                backface-visibility: hidden;
+                position: absolute;
+            }
+            .img-back{
+               transform: rotateY(180deg);
+            }
+           .notes{
+               width: 50%;
+               height: 65%;
+               top: 20%;
+               position: absolute;
+               
+               left:4%;
+               z-index: 1;
+           }
+           .note1{
+               font-size:9.5pt;
+               font-weight: 700;
+           }
+           .note2{
+               font-size: 14pt;
+               margin-left: 1.5%;
+               font-weight: 900;
+               color: #004AAD;
+           }
+           #quotes{
+             font-size: 7.5pt;
+             margin-left: -28%;
+             margin-top:
+             4%;
+             text-align: center;
+           }
+           .btn-container{
+               position: relative;
+               left: 18%;
+           }
+           .btn1{
+               font-size: 6pt;
+               background: #004AAD;
+           }
+           .btn1:hover{
+               background: green;
+           }
+           .menu-contents{
+               position: absolute;
+               display: none;
+               background: royalblue;
+               color: white;
+              text-align: center;
+              font-size: 12pt;
+              top: 1%;
+              left: 102%;
+              border-radius: 10px;
+               padding: 8px;
+               overflow: hidden;
+           }
+           .menu{
+               position: relative;
+               width: 8vw;
+               height: 8vw;
+               font-size: 8vw;
+           }
+           .menu:hover .menu-contents{
+               display: block;
+               
+           }
+           #big{
+               display: none;
+           } #notes4{
+               display: none;
+           }
+@media (min-width:400px){
+           .container{
+               width: 100%;
+           }
+           .content{
+               width: 420px;
+               height: 360px;
+           }
+           .note1{
+           font-size: 10.5pt;
+       }
+           .note2{
+               font-size: 16pt;
+           }
+           #quotes{
+               font-size: 9.5pt;
+           }
+           .bg-circle{
+               width: 380px;
+               height: 380px;
+           }
+      }
+      @media (min-width:900px){
+          .container{
+              position: absolute;
+              right: 0;
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+          }
+.content{
+    margin-right: 10%;
+   margin-top: 20%;
+}
+#big{
+    display: block;
+    position: absolute;
+    z-index: 1;
+    color: royalblue;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 2;
+    font-family: 'poppins',serif;
+    left: -20%;
+    font-size: 50pt;
+}
+#notes4{
+    display: block;
+    position: absolute;
+    z-index: ;
+    color: #252525;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 2;
+    font-family: 'poppins',serif;
+    left: -18%;
+    top:60%;
+    font-size: 14pt;
+}
+}
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="menu">
+                &#9776;
+                <div class="menu-contents btn btn-primary">
+                   <a href="prtask.html" style="color:white;text-decoration:none;">Back</a> 
+                </div>
+            </div>
+        </header>
+        <div class="container">
+                                            <p id="big">
+                RESUME
+                <p id="notes4">
+                    Click the download button<br> to view the <q>RESUME</q>
+                </p>
+            </p>
+            <div class="content">
+                           <div class="notes">
+             <div class="note1">
+             FULL STACK DEVELOPER
+             </div>
+             <div class="note2">
+             RUSSEL ANGELO<br>
+              ANCHETA
+             </div>
+            <p id="quotes">
+            The first rule of <br>programming, If it's working<br> <q>DON'T TOUCH IT.</q>
+            </p>
+             <br>
+            <div class="btn-container">
+            <a href="russ-resume.pdf" download>
+            <button class="btn btn-primary btn1" type="submit">DOWNLOAD</button>
+            </a>
+             </div>
+              </div>
+                <div class="bg-circle">
+                    </div>
+      <div class="img">
+                    <div class="img-inner">
+                    <div class="img-front">
+              <img class="" src="ancheta.jpg" width="198px"
+              height="200px" style="border-radius:50%;"/>          
+                    </div>
+               <div class="img-back">
+           <img class="" src="russel.jpg" width="198px"
+              height="200px" style="border-radius:50%;"/>
+               </div>
+                </div>
+            </div>
+
+    </body>
+</html>
